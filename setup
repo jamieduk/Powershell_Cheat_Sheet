@@ -1,0 +1,14 @@
+#!/bin/bash
+#
+NOW=`date '+%F_%H:%M:%S'`;
+echo "This Will Setup J~Net Powershell Database 2026 The Time & Date Is $NOW"
+sudo apt install -y fzf p7zip-full bat
+
+chmod +x add_missing add_record compression jnet menu more_info open_record search_records show_records update-check update_record
+# Make folkders if required!
+#[ ! -d "records" ] && sudo mkdir records
+# Check if count file exists!
+#[ ! -f "records/count.txt" ] && echo "0" > records/count.txt
+# Goto Menu!
+bash compression 1
+bash menu
